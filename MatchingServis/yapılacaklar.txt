@@ -1,0 +1,25 @@
+
+
+
+* Emir sisteminde emirTipi ve islemTipi koy, IslemTipi 0-> Emir Silme, 1-> Emir Ekleme
+* Router Sayfaları düzenlenecek.
+* en yüksek ve en düşük kurları ekrana yaz. güncel fiyatı ekrana yaz.
+* Sistemde genel bir güncelleme ile fazladan olan parsefloat to fixedları kontrol et ve sil.
+* Tüm veri çıkışları miktar için 8 hane kur içi 2 hane olmalı. 000 olanlar sayılmayabilir.
+
+
+tamamlananlar
+
+* Mevcut Emirleri listeleme sayfası
+* Tüm işlemleri Senkronize yap
+* Veritabanına emir ekleme ve emir silme ve güncelleme işlemleri bitmeden tekrar handler çalışmasın.
+* Eklenen emir 8li decimal oluyor
+* MongoDB update te $set eklenmeli ve objeler buna uydurulmalı, upsert ne araştır.
+* decimal kontrolleri
+* Decimal ve parsefloat ve tofixedları düzenle db güncellerken vs.
+* Floata döndürüldü 8 hanenin aşağısı gözükmüyor. 0000 olan hanelerde gözükmüyor.
+* Bakiye için yeni sistem yapılırsa bağlantısı geliştirilecek
+* Eşleştirmede satış girildiğinde mevcut emrim miktarı küçükse sorun var
+* Emir Eşleştiğinde dışarı eşleşme eventi gönder
+* Emir girildiğinde web siteye emir guncelle eventi göndert
+* Emirler eşleştiğinde bakiye sunucusunda bakiyeleri dağıttır.
