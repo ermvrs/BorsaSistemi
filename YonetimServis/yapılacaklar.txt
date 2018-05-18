@@ -1,0 +1,13 @@
+YAPILACAKLAR
+**************************
+-> Yönetim hesabıyla giriş ve çıkış yapma
+-> Tüm sekmeler authLevele göre açılsın.
+-> authLevel 4 için başka yönetim hesabı oluşturma.
+-> Tüm yapılan işlemler log tutulsun(db ye)
+-> Kullanıcıya Bakiye verme
+-> Yönetim ana sayfasından sitede aktif kaç kullanıcı var görme
+-> Kullanıcı seq ten mesaj gönderme
+-> Kullanıcı bilgilerini tablo halinde gösterip düzenleme
+
+YAPILANLAR
+**************************
