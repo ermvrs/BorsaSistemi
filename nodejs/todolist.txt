@@ -1,0 +1,42 @@
+Adres oluşturma tamamlandı.
+
+Oluşturulan adresler veritabanına işleniyor userID ile birlikte
+
+Eğer veritabanında mevcut userID ye daha önceden bir adres oluşturulmuşsa oluşturulan adresi geri gönderiyor.
+Adres oluşturulmamışsa yeni adres oluşturup onu gönderiyor.
+
+rpc listesi konfigurasyon dosyasında yazıyor.
+
+Bakiye kontrolü için test edilmesi gerekiyor. (Decimal den sorun çıkabilir.)
+
+Para çekimlerinde miningfee ler sorun olursa settxfee komutunu kullanabiliriz.
+
+Para yatırıp çekmeyi ve sitede onaylamayı test etmek gerekiyor.
+
+Siteyle bağlantıya sistem hazır durumda sayılabilir.
+
+
+yapılacak 
+****
+ -> RPC lerde error oluşması durumunda bunu log tutması gerekiyor. %kripto_para_adi%_hatalar diye bir veritabanı tablosunda tutulabilir.
+****
+
+
+Dönen verileri
+
+Adres Oluşturma 
+-------
+            userID : userID
+            adres  :  Oluşturulan Adres
+
+Bakiye kontrolü
+-------
+                userID: userID
+                EklenecekMiktar : Kullanıcının bakiyesine eklenmesi gereken miktar
+
+Para çekme
+-------
+            CekilenAdres: Paranın gönderildiği adres
+            Miktar: Gönderilen Miktar
+            TXID: Transaction ID
+            userID: userID
