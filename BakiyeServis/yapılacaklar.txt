@@ -1,0 +1,50 @@
+AMAÇ SİSTEMDEKİ TÜM BAKİYE ARTMA VE AZALTMALARINI SENKRONİZE YAPMAK
+BU SAYEDE HİÇ KİMSENİN BAKİYESİNDE BİR HATA OLUŞMAZ
+
+DATABASE
+|
+-> BakiyeServis
+  -> Cuzdanlar : Yatırma Çekme Adresleri Burada Saklanacak
+  -> Bakiyeler : Bakiyeler burada saklanacak
+
+
+BURADA YAPILACAKLAR
+
+
+-> Yeni islem Handle ı emir sistemiyle entegre edip kontrol et.
+-> Sistemde bazen bir işlem bitmeden diğerine atlıyor bunu yapmasın.
+-> Asenkronizasyon testleri
+-> IP koruması
+
+
+YAPILANLAR
+
+-> Bakiye Sistemi yapıldı
+-> Tüm işlemler bir arrayda toplanıp fonksiyon ile o arraydan çekilip tek tek işlenecek.
+-> Router ile dışarı açılan fonksiyonlarda bakiye azaltma ve arttırma işlemleri olacak.
+-> Bu yazılım haricinde hiç bir servisin bakiye verilerini değiştiremeyecek. Listeleme website servisinden yapılabilir.
+-> Islem modeline emir ide ekle ve kontrol et bakiye işlemi tamamlanınca emiri emir sunucusuna gönder.
+-> Emir girerken kullanıcıya bakiyesi yeterliyse girildi yazsın.
+-> Emir girme işlemi bakiye azaltımı işleminden sonra yapılacak.
+-> Bakiye azaltma ve arttırmada 8 haneden sonrasına gidiyor kontrol et**
+
+ÇALIŞMA SİSTEMİ
+
+EMİR GİRME SIRALAMASI
+
+WEB SİTE EMİR GİRİLDİ 
+-> BAKİYE YETERLİMİ KONTROLU -1 
+-> BAKİYE AZALTMA TALEBİ BU SERVİSE GELDİ 
+-> BAKIYE YETERLIMI KONTROLU -2 
+-> BAKİYE AZALTILDI 
+-> EMİR GİRİLME İŞLEME ALINDI 
+-> EMİR GİRİLDİ
+
+
+
+EMİR EŞLEŞME SIRALAMASI
+
+EŞLEŞEN EMİRLERDEKİ USERIDLER BURAYA GELİR 
+-> BAKİYE ARTTIRMA SIRALAMALARI EKLENİR 
+-> BAKİYE ARTTIRILIR 
+-> ?? BAKİYE GÜNCELLENDİĞİNE DAİR FRONTENDE EVENT GÖNDER
