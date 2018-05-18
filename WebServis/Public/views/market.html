@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col-sm-4">
+            {{response}}
+        <div class="row">
+            
+            <form ng-submit="satisSubmit()">
+                    <div class="form-group form-check">
+                            <label class="form-check-label"> <b>Satış Emri</b>
+                            </label>
+                        </div>
+                <div class="form-group">
+                    <label for="email">Miktar:</label>
+                    <input type="text" class="form-control" id="satis_miktar" ng-model="satis_miktar" ng-change="SatisChange()">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Kur:</label>
+                    <input type="text" class="form-control" id="satis_kur" ng-model="satis_kur" ng-change="SatisChange()">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Toplam Tutar:</label>
+                    <input type="text" class="form-control" value="{{satis_toplam}}" disabled>
+                    
+                </div>
+                <button type="submit" class="btn btn-primary">Emri Gir</button>
+            </form></div>
+            <div class="row">
+                
+            <form ng-submit="alisSubmit()">
+                    <div class="form-group form-check">
+                            <label class="form-check-label"> <b>Alış Emri</b>
+                            </label>
+                        </div>
+                    <div class="form-group">
+                        <label for="email">Miktar:</label>
+                        <input type="text" class="form-control" id="alis_miktar" ng-model="alis_miktar" ng-change="AlisChange()">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Kur:</label>
+                        <input type="text" class="form-control" id="alis_kur" ng-model="alis_kur" ng-change="AlisChange()">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Toplam Tutar:</label>
+                        <input type="text" class="form-control" value="{{alis_toplam}}" disabled>
+                        
+                    </div>
+                    <button type="submit" class="btn btn-primary">Emri Gir</button>
+                </form>
+            </div>
+    </div>
+    <div class="col-sm-4">
+  <h2>Alış Emirleri</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Kur</th>
+        <th>Miktar</th>
+        <th>Toplam</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+        <tr class="animate-repeat" ng-repeat="emir in emirler.alis | orderBy: sortAlis | limitTo: 10">
+            <td>{{ (emir.kur | number:2) + '₺' }}</td>
+            <td>{{ (emir.miktar | number:8) + 'Ƀ' }}</td>
+            <td>{{ (emir.kur * emir.miktar | number:2) + '₺' }}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-sm-4">
+  <h2>Satış Emirleri</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Kur</th>
+        <th>Miktar</th>
+        <th>Toplam</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="animate-repeat" ng-repeat="emir in emirler.satis | orderBy: sortSatis | limitTo: 10">
+            <td>{{ (emir.kur | number:2) + '₺' }}</td>
+            <td>{{ (emir.miktar | number:8) + 'Ƀ' }}</td>
+            <td>{{ (emir.kur * emir.miktar | number:2) + '₺' }}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+<script>
+
+</script>

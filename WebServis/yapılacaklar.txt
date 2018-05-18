@@ -1,0 +1,86 @@
+YAPILACAKLAR
+=========================
+
+=> Bakiye Sisteminin entegrasyonu tamamlanacak.
+=> İşlem yapıldığında bakiye güncelle eventi çalıştırılacak.
+=> Routere bir fonksiyon yaz ve bu fonksiyon tüm requestleri loglasın. app.use ilede kullan.
+=> Angular bir sayfada kullandığın değişkenleri aynı isimle kullanma mesela $scope.response gibi değil $scope.giris.response gibi kullan
+=> Bakiye sistemi başka bir service olarak yazılıp socketio ile bağlantı sağlanabilir.
+=> Bakiye sistemi entegrasyonu
+=> Bakiye Yatırma ve Çekme Sayfaları
+=> Order Engine da diğer parabirimleri için sistemin iyileştirilmesi.
+=> Yönetim Paneli başlangıcı
+=> Yönetim Panelinden sitedeki anlık kullanıcı sayısı
+=> Girilen Emirleri log tutma (Hem OrderMatcher da hem Burada)
+=> Api sunucusunu gönderilen tüm veriler ve cevaplar log tutulsun.
+=> Sabit footer düzenlemesi
+=> Ana Sayfa Düzenlemesi
+=> Eşleştirme mekaniğinde hacim hesaplama
+=> Hesaplanan hacimleri anasayfaya yazdır.
+=> Eşleştirme mekaniğini dockerlaştırma.
+=> Güvenlik güncelleştirmeleri
+
+(dbdeki stringleri kullanmak için parsefloat kullan, string yapmak için tostring())
+
+TAMAMLANANLAR 
+==========================
+
+=> Public klasörünü express ile static olarak dışarı çıkart.
+=> Mongoose ile veritabanı bağlantısı yap
+=> Mongoose ile kayıt yapma tamamlandı.
+=> Mongoose ile user scheması oluştur.
+=> Angular Router Yapıldı.
+=> Web site Angular alt yapısı oluşturulsun.
+=> Angular Router ile kayıt giriş ol sayfaları.
+=> Api Router ile NG Routeri router.js de ayır.
+=> Web site konfigurasyon bilgilerini api serverdan çekip angular ile yaz.
+=> $http ile post gönderiminde hata var bunu düzelt.
+=> Kayit.html dosyası ile basit tasarım ile kayıt yapılacak.
+=> Kayıt Sayfası ve işlemleri.
+=> Api Server web site title vs. bilgilerini dışarı çıkartsın.
+=> Marketler için Sayfa ve Controllerlar oluşturuldu.
+=> Market Apilerinden gelen jsonları Angular ile tablolara yaz.
+=> Marketler için Api oluştur.
+=> Post ile Alış ve Satış Emri girme yapılacak.
+=> Post ile veri gönderimi çalışmıyor. Veriler ulaşmıyor.
+=> Giriş Yap sayfası ve işlemleri.
+=> Giriş yapmak için express session veya herhangi bir session sistemi entegresi.
+=> Angular ile session giriş yapılmışmı check etme.
+=> Çıkış Yapma.
+=> Profil Sayfası.
+=> Angular ile gereken sayfalara giriş yapılmadan erişim sağlanmasın. 
+=> Emir Sayfasında toplam tutarı dinamik gösterme yazıldı.
+=> Emir girme ve eşleştirme tamamlandı.
+=> Hesaplara userid tanımlaması yapıldı. seq : userid auto incerement.
+=> Giriş yapma sistemini veritabanıyla entegre et.
+=> Profil Sayfasından şifre değiştirme işlemi.
+=> Şifre güncelleme işlemi veritabanı tamamlanacak.
+=> Marketlerde navbarda active sayfayı gösterme yapıldı.
+=> Mongoose u kaldırıp sistemi MongoDB Cliente geçir.
+=> Giriş yapıldığında navbarı güncelleme fonksiyonunu tamamla $on $emit $broadcast değişken aktarma ile email vs aktar.
+=> Anasayfadan giriş yapma.
+=> Navbarı dinamik güncelle yapmak. ngview gibi düzenlenmeli ama sayfa yenilenmemeli.
+=> Profil Sayfalarından bilgileri düzenleme.
+=> Navbarı güncel tutacak bir sistem yapıldı.
+=> Order Engine bağlantısını routerden try catch e al ve bağlanılamazsa hata verdir.
+=> Socketio ile başkası web siteye girdiğinde mevcut clienta veri gönder.
+=> Socket Factory AngularJS myApp'e eklendi.
+=> Emir tablosunda kurlara göre sıralama yapıldı.
+=> Eşleştirme Mekaniği sistemi float a döndürüldü.
+=> Emirler tablosu listeleme kurları birleştir.
+=> Socket.io ile client online ise seq den cliente mesaj gönderilecek.
+=> Socket.io Bağlantısını geliştir.
+=> Eşleştirme mekaniğinden gelen veriler tofixed 8 ile stringe dönüştürülüp yazılsın.
+=> Eşleştirme mekaniği sayıya dönüldü şimdi aynı kurdan miktarları toplayıp yazdırabiliriz.
+=> Veritabanı listelemede aggreagationda limitleyip $limit ve kur: miktar: şeklinde çıkar
+=> Veritabanı limitlemede sort kullan
+=> Socket.io ile emirler tablosunu güncelle
+=> Emir tablosundan toplam listelenecek sayı belirlensin 20-50
+=> Emir Ekleme ve Emir Eşleşme eventleri ( emir eşleştiğinde ve emir eklendiğinde çalışanlar)
+=> Emir listelemeyi socketio ile sadece değişimi güncellet.
+=> ng-repeat yerine data table kullan ve emir güncellemede array indexe göre güncelle
+=> Socket.io ile gereksiz işlemleri kaldır.
+=> Emir girilirken bakiye azaltma
+=> Eşleştirme mekaniği ile web sitenin arasındaki iletişimi geliştirme.
+=> Emir sistemini baştan kontrol et bakiye sistemiyle birlikte, al satı test et
+=> Emir girilirken giriş yapmışmı kontrol et
